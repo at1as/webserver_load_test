@@ -1,0 +1,27 @@
+{
+  "enabled": false,
+  "browser_url_endpoint": "login",
+  "username": {
+    "enabled": true,
+    "value": "user1",
+    "dom_value": "username",
+    "dom_element_type": "name"
+  },
+  "password": {
+    "enabled": true,
+    "value": "password1",
+    "dom_value": "password",
+    "dom_element_type": "id"
+  },
+  "submit_button":{
+    "dom_value": "submit",
+    "dom_element_type": "id"
+  },
+  "api_authentication":{
+    "enabled": false,
+    "endpoint": "login",
+    "request_type": "post",
+    "payload_as_string": "{'username':'user1', 'password':'password1'}",
+    "payload_format": "json"
+  }
+}

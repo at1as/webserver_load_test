@@ -1,0 +1,10 @@
+{
+  "protocol": "https",
+  "url": "www.example.com",
+  "endpoints": [
+    "first_endpoint",
+    "second_endpoint",
+    "third_endpoint"
+  ]
+}
+
