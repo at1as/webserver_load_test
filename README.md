@@ -17,9 +17,11 @@ Load testing is distributed across two seperate tools, `spawn_browsers.py` and `
 
 ### Installation
 
-`$ git clone https://github.com/at1as/web_load_test.git`
-`npm install -g phantomjs`
-`pip install selenium`
+```bash
+$ git clone https://github.com/at1as/web_load_test.git
+$ npm install -g phantomjs
+$ pip install selenium
+```
 
 ### Configuration Files
  
@@ -28,30 +30,31 @@ Load testing is distributed across two seperate tools, `spawn_browsers.py` and `
 Note, currently only supports payload authentication.
 
 "browser_url_endpoint", "username", "password" and "submit_buttom" are for selenium testing in spawn_browsers.py. 
+
 "api_auth_endpoint" and "api_auth_payload" are for spawn_requests.py.
 
-* browser_authentication
-* 	enabled => Whether to authenticate before traversing urls [true or false]
-* 	endpoint => Url endpoint of the browser login page [ex "login"]
-* username
-*   enabled => Whether to supply a username [true or false]
-*   value => The username string [ex "user1"]
-*   dom_value => The value of the dom key to search for to identify the username field [ex. "username_input"] 
-*   dom_element_type => The type of element attribute to search for to identify username field ["id" or "name"]
-* password
-*   enabled => Whether to supply a password [true or false]
-*   value => The password string [ex "password1"]
-*   dom_value => the value of the element key to search for to identify the password field [ex. "password_input"]
-*   dom_element_type => the type of element attribute to search for to identify the password field ["id" or "name"]
-* submit_button
-*   dom_value => the value of the element key to search for to identify [ex. "submit_btn"]
-*   dom_element_type => the type of element attribute to search for the identify the submit button ["id" or "name"]
-* api_authentication
-*   enabled => Whether to enable API authentication [true or false]
-*   endpoint => The endpoint of the authentication API call (which is not necessary the same as the browser url) [ex. "/authenticate"]
-*   request_type => The type of API call needed to authenticate [typically "post", sometimes "put"]
-*   payload_as_string => the body the api request must send to authenticate [ex. "{'username':'user1', 'password':'pass1'}"]
-*   payload_format => the format of the body ["application/json", "application/xml", "text/plain"]
+* **browser_authentication**
+    * enabled => Whether to authenticate before traversing urls [true or false]
+    * endpoint => Url endpoint of the browser login page [ex "login"]
+* **username**
+    * enabled => Whether to supply a username [true or false]
+    * value => The username string [ex "user1"]
+    * dom_value => The value of the dom key to search for to identify the username field [ex. "username_input"] 
+    * dom_element_type => The type of element attribute to search for to identify username field ["id" or "name"]
+* **password**
+    * enabled => Whether to supply a password [true or false]
+    * value => The password string [ex "password1"]
+    * dom_value => the value of the element key to search for to identify the password field [ex. "password_input"]
+    * dom_element_type => the type of element attribute to search for to identify the password field ["id" or "name"]
+* **submit_button**
+    * dom_value => the value of the element key to search for to identify [ex. "submit_btn"]
+    * dom_element_type => the type of element attribute to search for the identify the submit button ["id" or "name"]
+* **api_authentication**
+    * enabled => Whether to enable API authentication [true or false]
+    * endpoint => The endpoint of the authentication API call (which is not necessary the same as the browser url) [ex. "/authenticate"]
+    * request_type => The type of API call needed to authenticate [typically "post", sometimes "put"]
+    * payload_as_string => the body the api request must send to authenticate [ex. "{'username':'user1', 'password':'pass1'}"]
+    * payload_format => the format of the body ["application/json", "application/xml", "text/plain"]
  
 #### url_list.json
    
@@ -74,7 +77,7 @@ Above, all browsers will run simultaneously. Enter for quantity to disable one b
 
 ### Test Runners
 
-Run all scripts from the root directory (i.e., `python runner/spawn_browsers.py`)
+Run all scripts from the root directory (i.e., `$ python runner/spawn_browsers.py`)
    
 #### Spawn_Browsers.py
  
